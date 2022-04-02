@@ -1,7 +1,11 @@
+from ensurepip import bootstrap
 from urllib import response
 from flask import Flask, request, make_response, redirect, render_template
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+
+bootstrap= Bootstrap(app)
 
 todos=['Implementar los modelos seleccionados de CV','Construir base de datos BD','Implementar e integrar BD con FrontEnd y BackEnd', 'Divulgar']
 
