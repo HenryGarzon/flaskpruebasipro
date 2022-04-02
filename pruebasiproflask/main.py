@@ -5,6 +5,17 @@ app = Flask(__name__)
 
 todos=['Implementar los modelos seleccionados de CV','Construir base de datos BD','Implementar e integrar BD con FrontEnd y BackEnd', 'Divulgar']
 
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html', error=error)
+
+
+@app.errorhandler(500)
+def unexpectedError(error):
+    return render_template('500.html', error=error)
+
+
+
 @app.route('/')
 def index():
     user_ip=request.remote_addr
