@@ -1,5 +1,14 @@
 {% if user_ip %}
-<h1>Bienvenido a SIPRO con Flask :), para la ip {{user_ip}}</h1>
+    <h1>Bienvenido a SIPRO con Flask :), para la ip {{user_ip}}</h1>
 {% else %}
-<a href="{{ url_for('index') }}"> Ir a Inicio </a>
+    <a href="{{ url_for('index') }}"> Ir a Inicio </a>
 {% endif %}
+
+
+<ul>
+    {% for todo in todos  %}
+        <li>todo</li>
+    {% endfor %}
+</ul>
+
+
